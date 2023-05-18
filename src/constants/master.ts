@@ -1,0 +1,38 @@
+export const MasterData = {
+  participationJoinMode: [
+    { name: 'System Pre-recorded' },
+    { name: 'Live-Realtime' },
+  ],
+  selectionCriteria: [{ name: 'Topper' }, { name: 'Random' }],
+  rankType: [{ name: 'Percentage' }, { name: 'Number' }],
+  questionSource: [{ name: 'Fixed' }, { name: 'Bank' }],
+  quizContent: [{ name: 'Academic Subject' }, { name: 'Generic' }],
+  academicSubject: [
+    { name: 'Telugu' },
+    { name: 'English' },
+    { name: 'Hindi' },
+    { name: 'Maths' },
+    { name: 'Science' },
+    { name: 'social' },
+    { name: 'Gk' },
+  ],
+  curriculum: [{ name: 'CBSE' }, { name: 'SSC' }],
+  questionType: [{ name: 'SCQ' }, { name: 'MCQ' }],
+  questionContent: [
+    { name: 'Video' },
+    { name: 'Audio' },
+    { name: 'Image' },
+    { name: 'Doc' },
+    { name: 'Text' },
+  ],
+  optionContent: [
+    { name: 'Video' },
+    { name: 'Audio' },
+    { name: 'Image' },
+    { name: 'Doc' },
+    { name: 'Text' },
+  ],
+  messageCategory: [{ name: 'Message category' }, { name: 'Message type' }],
+  version: 1.0,
+  createdBy: 'Admin',
+};

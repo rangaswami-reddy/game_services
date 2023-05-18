@@ -1,0 +1,31 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: game-service-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: game-service-api
+      app: game-service-api
+  template:
+    metadata:
+      labels:
+        component: game-service-api
+        app: game-service-api
+    spec:
+      containers:
+      - name: game-service-api
+        image: 114673968531.dkr.ecr.ap-south-1.amazonaws.com/game-service-api:$IMAGE_TAG
+        env:
+        - name: DATABASE_URL
+          valueFrom:
+            configMapKeyRef:
+              name: game-service-api
+              key: DATABASE_URL
+        - name: KAKFA_BROKERS
+          valueFrom:
+            configMapKeyRef:
+              name: game-service-api
+              key: KAKFA_BROKERS
